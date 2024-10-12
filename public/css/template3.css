@@ -1,0 +1,484 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-image: url('/4024286.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(8px);
+}
+button:hover
+{
+opacity: 0.9;
+}
+
+.d1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin-top: -100px;
+    box-sizing: border-box;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.wrapper {
+    margin-bottom: 200px;
+}
+
+.image--cover {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center right;
+}
+
+.d1-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -100px;
+}
+
+.d1-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+}
+.l1 a {
+    flex-grow: 1;
+     /* This allows the link to take up all available space */
+    text-align: center; /* This centers the text within the link */
+}
+
+.l1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   border: 2px solid #9cabea;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: #37055e;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239cabea' fill-opacity='0.25'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    border-radius: 50px;
+    padding: 20px 50px;
+    margin: 15px 0;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    position: relative;
+}
+
+
+.l1-text {
+    font-weight: bold;
+    color: #e3e4e5;
+}
+.menus-container {
+    display: none;
+    flex-direction: column;
+    width: 180px;
+    background-color: #0D1117;
+    justify-content: center;
+    border-radius: 5px;
+    position: absolute; /* or fixed */
+    top: 460px; /* Adjust the vertical position */
+    right: 250px;
+
+
+
+    z-index: 1000; /* Ensure the menu is on top */
+    display: none;
+}
+
+
+.openDialogBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0px; /* Space between text and button */
+}
+.openDialogBtn:hover {
+   background-color: #cac9c9;
+   border-radius: 50px;
+   padding: 1px;
+   transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+
+    margin-left: 0px; /* Space between text and button */
+}
+.openDialogBtn svg path{
+    fill: #e3e4e5;
+}
+.openDialogBtn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor; /* This will make the SVG color match the text color */
+}
+
+@font-face {
+    font-family: 'Link Sans';
+    src: url('./fonts/LinikSans-Black.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.l1:hover {
+   opacity: 0.9;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* Other styles remain unchanged */
+
+
+.add-button {
+    position: absolute;
+    top: 20px;  /* Adjust distance from the top */
+    right: 20px; /* Adjust distance from the right */
+   border: 2px solid #9cabea;
+   border-radius: 7px;
+    z-index: 10; /* Ensure the button is above other elements */
+}
+
+
+.add-button button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #37055e;
+    color: #e3e4e5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+}
+
+.add-button button:hover {
+    opacity: 0.8; /* Darker shade on hover */
+}
+.dialog1,.editDialog {
+    border: 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 30px;
+    padding: 25px;
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.31);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+}
+.myDialog2{
+    border: 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 30px;
+    padding: 20px;
+    max-height: 700px;
+   /* From https://css.glass */
+background: rgba(255, 255, 255, 0.31);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(15px);
+-webkit-backdrop-filter: blur(15px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+}
+.img-div{
+    background-color: #fff;
+    border-radius: 20px;
+}
+#myDialog h2{
+    font-size: 2rem;
+    font-style: italic;
+    color: #23023d;
+}
+.img-div img{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+input[type="text"]{
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    font-size: 1.1rem;
+    border: 0px;
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+}
+.add{
+    border: 0;
+    background: #9cabea;
+    color: #23023d;
+    padding: 1em;
+    border-radius: 14px;
+    font-weight: bold;
+    width: 100px;
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+
+}
+#closeEditDialogBtn {
+    background-color: #9cabea;
+    color: #23023d;
+    border-radius: 14px; /* Keep only one */
+    border: 0; /* Corrected to '0' instead of '0px' for better readability */
+    padding: 1em;
+    font-weight: bold;
+    width: 100px;
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+}
+
+.cancel{
+    border: 2px solid #23023d;
+    background: transparent;
+    padding: 0.8em;
+    border-radius: 14px;
+    font-weight: bold;
+    width: 100px;
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+}
+.add:hover{
+    opacity: 0.8;
+}
+.cancel:hover,.closeDialogBtn2:hover{
+    opacity: 0.8;
+}
+.d1-text h2{
+    font-family: "Playball", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.3rem;
+    color: #f5f5f5;
+}
+
+
+.logo-container {
+    text-align: center;
+    padding: 50px 0;
+
+}
+.logo-text {
+    display: inline-flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #e3e4e5;
+}
+.logo-text svg path{
+    fill: #e3e4e5;
+
+}
+.logo-text svg {
+    margin-left: 8px;
+}
+p{
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #f5f5f5;
+}
+
+#myDialog h2{
+    padding-bottom: 20px;
+}
+.myDialog2 p{
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #111;
+}
+.btns button{
+border-radius: 50%;
+padding: 10px;
+border: 0px;
+margin: 5px;
+background-color: #fff;
+
+}
+.btn-with-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.btn-label {
+    font-size: 0.9rem;
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+    margin-top: 5px;
+    color: #37055e;
+}
+/* Ensure buttons are not too large */
+.btn-with-label button {
+    width: 50px;
+    height: auto;
+    padding: 8px;
+    margin: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+form .saveEdit {
+    background-color: #37055e;
+    color: #9cabea;
+    border-radius: 20px;
+    border: 0px;
+    padding: 1em;
+    border-radius: 14px;
+    font-weight: bold;
+    width: 100px;
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+/* Your desired styles */
+}
+.img-div2{
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 20px auto;
+    height: auto;
+    width: 70%;
+}
+.img-div2 img{
+    height: auto;
+    width: 90%;
+}
+
+.btns svg path{
+    fill: #37055e;
+}
+
+.btns{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 15px;
+}
+.btn-with-label button{
+    background-color: #9cabea;
+}
+.btns button:hover{
+    background-color: #cac9c9;
+    transition: 0.3s ease;
+}
+.add-links{
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 20px;
+}
+.closeDialogBtn2{
+    border: 0;
+    background: #37055e;
+    color: #9cabea;
+    padding: 1em;
+    margin-top: 10px;
+    border-radius: 14px;
+    font-weight: bold;
+    width: 100px;
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+
+}
+#closeDialogBtn2:hover{
+    opacity: 0.9;
+}
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+      left: 20px;  /* Adjust distance from the top */
+      top: 15px;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    font-family: 'Link Sans', 'Arial Black', 'Arial', sans-serif;
+    background-color: rgb(255, 65, 65);
+  }
+
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sign svg {
+    width: 17px;
+
+  }
+
+  .sign svg path {
+    fill: white;
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    margin-right: -10px;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px ,2px);
+  }
