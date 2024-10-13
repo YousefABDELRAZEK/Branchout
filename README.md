@@ -15,7 +15,7 @@ BranchOut is a user-centric networking app that allows individuals to manage the
 
 * **User Authentication & Session Management**: Secure login and session handling to ensure each user's data is isolated and protected. Sessions persist across logins, providing a seamless experience.
 
-* **User-Specific Data**: Every user has their own dashboard to manage personal social links like LinkedIn, Twitter, Instagram, and more.
+* **User-Specific Data**: Every user has their social links like LinkedIn, Twitter, Instagram, and more only visible to the right user.
 
 * **Social Links CRUD**: Users can create, read, update, and delete their social links, managing their online presence in real time.
 
